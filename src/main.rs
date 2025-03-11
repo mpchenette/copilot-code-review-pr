@@ -132,8 +132,8 @@ fn handle_client(mut stream: TcpStream) {
 
 fn main() {
     // Create a TCP listener on port 8000
-    let listener = TcpListener::bind("127.0.0.1:8000").expect("Failed to bind to address");
-    println!("Server listening on http://127.0.0.1:8000/");
+    let listener = TcpListener::bind("0.0.0.0:8000").expect("Failed to bind to address");
+    println!("Server listening on http://0.0.0.0:8000/");
     
     // Create a new thread pool with 4 threads
     let pool = ThreadPool::new(4);
